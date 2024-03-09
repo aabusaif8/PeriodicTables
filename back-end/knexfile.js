@@ -8,10 +8,10 @@ require('dotenv').config();
 const path = require("path");
 
 const {
-  DATABASE_URL = "postgres://dqvbedul:fwMlvW96IAcA6ADMW8hs9Cnf9TPrZJPm@peanut.db.elephantsql.com/dqvbedul",
-  DATABASE_URL_DEVELOPMENT = "postgres://dqvbedul:fwMlvW96IAcA6ADMW8hs9Cnf9TPrZJPm@peanut.db.elephantsql.com/dqvbedul",
-  DATABASE_URL_TEST = "postgres://dqvbedul:fwMlvW96IAcA6ADMW8hs9Cnf9TPrZJPm@peanut.db.elephantsql.com/dqvbedul",
-  DATABASE_URL_PREVIEW = "postgres://dqvbedul:fwMlvW96IAcA6ADMW8hs9Cnf9TPrZJPm@peanut.db.elephantsql.com/dqvbedul",
+  DATABASE_URL = "postgres://bsnzzsni:wXspoYPVG5DU8rOY1RwS15TtMBQHZFnT@ziggy.db.elephantsql.com/bsnzzsni",
+  DATABASE_URL_DEVELOPMENT = "postgres://bsnzzsni:wXspoYPVG5DU8rOY1RwS15TtMBQHZFnT@ziggy.db.elephantsql.com/bsnzzsni",
+  DATABASE_URL_TEST = "postgres://bsnzzsni:wXspoYPVG5DU8rOY1RwS15TtMBQHZFnT@ziggy.db.elephantsql.com/bsnzzsni",
+  DATABASE_URL_PREVIEW = "postgres://bsnzzsni:wXspoYPVG5DU8rOY1RwS15TtMBQHZFnT@ziggy.db.elephantsql.com/bsnzzsni",
   DEBUG,
 } = process.env;
 
