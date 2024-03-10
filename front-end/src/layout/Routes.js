@@ -27,7 +27,7 @@ function Routes() {
         <Redirect to={"/dashboard"} />
       </Route>
       <Route exact path="/reservations/reservation_id/seat">
-        <SeatReservation />
+        <ReservationList />
       </Route>
       <Route exact path="/reservations/:reservation_id/edit">
         <EditReservation />
