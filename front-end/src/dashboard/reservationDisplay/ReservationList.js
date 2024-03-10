@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
+import SeatReservation from "../../seat/SeatReservation"
 export default function ReservationRow({ reservation, cancelRes }) {
   function handleCancel() {
     return window.confirm(
@@ -26,7 +26,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
           <Link
           className="btn btn-secondary"
           role="button"
-          to={`/reservations`}
+          to={`/reservations/:reservation_id/seat `}
           >
           Seat
           </Link>
