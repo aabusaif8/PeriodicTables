@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import SeatReservation from "../../seat/SeatReservation"
+import SeatReservation from "../../layout/seat/SeatReservation"
 export default function ReservationRow({ reservation, cancelRes }) {
   function handleCancel() {
     return window.confirm(

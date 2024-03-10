@@ -1,43 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router";
-import { isInTheFuture, isNotOnTuesday } from "../utils/date-time";
 
 export default function Form({
-  initialFormData,
+  initialformData,
   handleFormChange,
   handleSubmit,
 }) {
   const history = useHistory();
-  const [error, setError] = useState(null);
 
   const handleCancel = () => {
     history.goBack();
   };
 
-  const validateReservation = (formData) => {
-    if (!isInTheFuture(formData.reservation_date)) {
-      setError("Reservation date must be in the future.");
-      return false;
-    }
-    if (isNotOnTuesday(formData.reservation_date)) {
-      setError("Reservation date cannot be on a Tuesday.");
-      return false;
-    }
-    // Additional validation logic can be added here if needed
-    return true;
-  };
-
-  const clearError = () => {
-    setError(null);
-  };
-
   return (
-    <>
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error}
-        </div>
-      )}
+    initialformData && (
       <form onSubmit={handleSubmit} className="form-group">
         <fieldset>
           <legend className="d-flex justify-content-center">
@@ -49,44 +25,71 @@ export default function Form({
               name="first_name"
               className="form-control"
               id="first_name"
-              placeholder={initialFormData?.first_name || "First Name"}
-              value={initialFormData?.first_name}
+              placeholder={initialformData?.first_name || "First Name"}
+              value={initialformData?.first_name}
               onChange={handleFormChange}
               required
             />
+          </div>
+          <div className="pb-1">
             <input
-            type="text"
-            name="last_name"
-            className="form-control"
-            id="last_name"
-            placeholder={initialFormData?.last_name || "Last Name"}
-            value={initialFormData?.last_name}
-            onChange={handleFormChange}
-            required
+              type="text"
+              name="last_name"
+              className="form-control"
+              id="last_name"
+              placeholder={initialformData?.last_name || "Last Name"}
+              value={initialformData?.last_name}
+              onChange={handleFormChange}
+              required
             />
           </div>
-          {/* Add other input fields here */}
+          <div className="pb-1">
+            <input
+              type="tel"
+              name="mobile_number"
+              className="form-control"
+              id="mobile_number"
+              placeholder={initialformData?.mobile_number || "Mobile Number"}
+              value={initialformData?.mobile_number}
+              onChange={handleFormChange}
+              required
+            />
+          </div>
+          <div className="pb-1">
+            <input
+              type="number"
+              name="people"
+              className="form-control"
+              id="people"
+              placeholder={initialformData?.people || "Number of guests"}
+              value={initialformData?.people}
+              onChange={handleFormChange}
+              required
+              min="1"
+            />
+          </div>
+
+          <input
+            type="date"
+            name="reservation_date"
+            className="form-control mb-1"
+            id="reservation_date"
+            placeholder={initialformData?.reservation_date || "YYY-MM-DD"}
+            value={initialformData?.reservation_date}
+            onChange={handleFormChange}
+            required
+          />
+          <input
+            type="time"
+            name="reservation_time"
+            className="form-control"
+            id="reservation_time"
+            placeholder={initialformData?.reservation_time || "HH:MM"}
+            value={initialformData?.reservation_time}
+            onChange={handleFormChange}
+            required
+          />
         </fieldset>
-        <input
-          type="date"
-          name="reservation_date"
-          className="form-control mb-1"
-          id="reservation_date"
-          placeholder={initialFormData?.reservation_date || "YYY-MM-DD"}
-          value={initialFormData?.reservation_date}
-          onChange={handleFormChange}
-          required
-        />
-        <input
-        type="time"
-        name="reservation_time"
-        className="form-control"
-        id="reservation_time"
-        placeholder={initialFormData?.reservation_time || "HH:MM"}
-        value={initialFormData?.reservation_time}
-        onChange={handleFormChange}
-        required
-        />
         <div className="d-flex justify-content-center pt-2">
           <button type="submit" className="btn btn-primary mr-1">
             Submit
@@ -100,6 +103,6 @@ export default function Form({
           </button>
         </div>
       </form>
-    </>
+    )
   );
 }
