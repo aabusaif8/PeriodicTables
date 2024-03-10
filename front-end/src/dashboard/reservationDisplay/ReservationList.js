@@ -26,7 +26,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
           <Link
           className="btn btn-secondary"
           role="button"
-          to={`/reservations/:reservation_id/seat `}
+          to={`/reservations/${reservation.reservation_id}/seat`}
           >
           Seat
           </Link>
