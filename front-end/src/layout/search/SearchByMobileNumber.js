@@ -38,6 +38,7 @@ export default function SearchByMobileNumber() {
       <div className="pt-3 pb-3">
         <form className="form-group" onSubmit={searchHandler}>
           <input
+          type = 'number'
             name="mobile_number"
             id="mobile_number"
             onChange={changeHandler}
