@@ -30,7 +30,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
 </Link>
       <td>
         <Link
-      className="btn btn-secondary"
+      className="btn btn-secondary center-button"
       role="button"
       to={`/reservations/${reservation.reservation_id}/edit`}
       >

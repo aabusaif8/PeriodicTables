@@ -97,6 +97,11 @@
   background-color: #f57c00; /* Dark orange on hover */
 }
 
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Styles for mobile view */
 @media (max-width: 768px) {
