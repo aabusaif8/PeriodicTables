@@ -22,6 +22,7 @@ router
 router
   .route("/")
   .get(controller.list)
+  .put(controller.update)
   .post(controller.create)
   .all(methodNotAllowed);
 
