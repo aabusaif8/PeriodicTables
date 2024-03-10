@@ -46,7 +46,7 @@ function Dashboard({ date }) {
 
   return (
     <main>
-      <h1 className="d-md-flex justify-content-center">Dashboard</h1>
+      <h1 className="text-center">Dashboard</h1>
       <div className="d-md-flex mb-3 justify-content-center">
         <h4 className="mb-0">Reservations for {date}</h4>
       </div>

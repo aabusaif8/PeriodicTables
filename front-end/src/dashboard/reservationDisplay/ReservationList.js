@@ -21,17 +21,13 @@ export default function ReservationRow({ reservation, cancelRes }) {
       <td data-reservation-id-status={reservation.reservation_id}>
         {reservation.status}
       </td>
-      <td>
-        {reservation.status === "booked" ? (
-          <Link
-          className="btn btn-secondary"
-          role="button"
-          to={`/reservations/${reservation.reservation_id}/seat`}
-          >
-          Seat
-          </Link>
-        ) : null}
-      </td>
+      <Link
+  className="btn btn-secondary"
+  role="button"
+  to={`/reservations/${reservation.reservation_id}/seat`}
+>
+  Seat
+</Link>
       <td>
         <Link
       className="btn btn-secondary"
