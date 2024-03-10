@@ -1,32 +1,47 @@
-# Restaurant Reservation App
-Live site: https://rest-front-beau.herokuapp.com
 
-## Description
-For this project, I created an application for restaurants to allows users to create, update, view, delete reservations, as well as seat them at varius tables within the restaurant.
+Here's a template for your README.md file:
 
-## Technologies & Tools
-- [ ] React
-  - [ ] React hooks
-  - [ ] React router
-- [ ] Node
-- [ ] Postgres
-- [ ] Express
-- [ ] CSS
-- [ ] Bootstrap4
-- [ ] HTML
-- [ ] JavaScript
-- [ ] RESTful APIs
+Restaurant Reservation System
+Live Application
+Link to Live Application [<!-- Replace # with the actual URL -->](https://periodictables-1.onrender.com)
 
-## Run Locally
-- [ ] Fork & Clone the repostory
-- [ ] Run `npm install`
-- [ ] Run `npm run start:dev` to start
+API Documentation
+/get reservations 
+/create resrvations
+/update reservations
+/search reservations
+/get tables 
+/create tables
+/update tables
+Summary
+The Restaurant Reservation System is a web-based application that allows users to make and manage reservations for a restaurant. Users can search for available tables, create new reservations, edit existing reservations, and cancel reservations. This application simplifies the process of managing restaurant reservations for both customers and staff.
 
-## Images
-![restaurant-app-final-home-page](https://user-images.githubusercontent.com/80596387/141701747-f7487e7b-3c8a-4ae8-9145-88d0b54062b2.png)
-![restaurant-app-final-new-res-page](https://user-images.githubusercontent.com/80596387/141701746-41546435-83a4-4365-90e2-721e198d1cb1.png)
-![restaurant-app-final-search-page](https://user-images.githubusercontent.com/80596387/141701750-3f5e4f51-72c2-4a15-9f21-20ed12a5206d.png)
-![restaurant-app-final-new-table-page](https://user-images.githubusercontent.com/80596387/141701752-8cee1e7e-1f6a-43fe-9a89-f111ef51ca47.png)
+Technology Used
+Frontend:
 
-# restraunt-app
-# testDeploy
+React.js
+HTML/CSS
+JavaScript
+Backend:
+
+Node.js
+Express.js
+PostgreSQL
+Other:
+
+Git/GitHub
+Jest/Supertest (for testing)
+Heroku (for deployment)
+Installation Instructions
+Clone the repository:
+bash
+Copy code
+git clone <repository-url>
+Install dependencies:
+Copy code
+npm install
+Start the development server:
+sql
+Copy code
+npm start
+Visit http://localhost:3000 in your web browser to view the application.
