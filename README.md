@@ -1,6 +1,4 @@
 
-Here's a template for your README.md file:
-
 Restaurant Reservation System
 Live Application
 Link to Live Application [<!-- Replace # with the actual URL -->](https://periodictables-1.onrender.com)
